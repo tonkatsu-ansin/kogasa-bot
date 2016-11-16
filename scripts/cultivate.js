@@ -4,7 +4,7 @@ module.exports = function(robot) {
   robot.respond(/test/, function(msg){
     robot.send({room: '#bot'}, 'おどろけーっ');
   });
-  new cron('0 * * * * ', () => {
+  new cronjob('0 * * * * ', () => {
     hangly--;
     if(hangly < 5) {
       robot.send({room: '#bot'}, 'お腹すいたわー');
