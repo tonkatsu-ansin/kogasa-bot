@@ -15,7 +15,7 @@ module.exports = function(robot){
       }
       msg.reply(`${msg.match[0]} -> ${results} = ${results.reduce((prev, current) => prev + current)}`);
     }catch(e){
-      msg.reply('おどろけーっ');
+      msg.reply('おどろけーっ' + e.message);
     }
   })
 }
