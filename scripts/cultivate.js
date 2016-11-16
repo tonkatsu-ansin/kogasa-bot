@@ -1,4 +1,8 @@
 module.exports = function(robot) {
+  robot.respond(/.+/, function(msg){
+    msg.reply('おどろけーっ');
+    msg.reply(msg.match[0]);
+  });
   robot.respond(/^(ping)/, function(msg){
     msg.reply('おどろけー');
   });
