@@ -5,7 +5,7 @@ var xorshift = require('xorshift');
    }
 }
 module.exports = function(robot){
-  robot.hear(/([1-9][0-9]*)d([1-9][0-9]*)/, function(msg){
+  robot.hear(/^([1-9][0-9]*)d([1-9][0-9]*)$/, function(msg){
     try{
       const trials = parseInt(msg.match[1], 10);
       const diceCount = parseInt(msg.match[2], 10);
