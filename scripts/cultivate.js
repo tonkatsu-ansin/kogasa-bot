@@ -2,7 +2,7 @@ var cronjob = require('cron').CronJob;
 var hangly = 5;
 module.exports = function(robot) {
   robot.respond(/test/, function(msg){
-    robot.send({room: '#bot'}, 'おどろけーっ');
+    robot.send({room: 'bot'}, 'おどろけーっ');
   });
   new cronjob('0 * * * * ', () => {
     hangly--;
