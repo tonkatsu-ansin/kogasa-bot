@@ -10,7 +10,7 @@ module.exports = function(robot){
     const diceCount = parseInt(msg.match[2], 10);
     var results = [];
     for(let i of range(0, trials)){
-      results.push(Math.floor(xorshift.random() * 6) +1);
+      results.push(Math.floor(xorshift.random() * diceCount) +1);
     }
     msg.reply(`${msg.match[0]} -> ${results} = ${results.reduce((prev, current) => prev + current)}`);
   })
